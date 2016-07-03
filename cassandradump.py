@@ -287,9 +287,8 @@ def setup_cluster():
     else:
         nodes = [args.host]
 
-    if args.port is None:
-        port = 9042
-    else:
+    port = 9042
+    if args.port:
         port = args.port
 
     cluster = None
